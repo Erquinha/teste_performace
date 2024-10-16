@@ -6,7 +6,7 @@ describe('Testes para getUserById', () => {
 
   beforeAll(async () => {
     await connection.query("CREATE TABLE IF NOT EXISTS cadastro (id INT AUTO_INCREMENT PRIMARY KEY, nome_aluno VARCHAR(255), matricula VARCHAR(20), email VARCHAR(255), data_nascimento VARCHAR(20))");
-    await connection.query("INSERT INTO agendamento (nome_aluno, matricula, email, data_nascimento) VALUES ('Erica Marques', '75999999999', 'email@email.com', '2000-10-11')");
+    await connection.query("INSERT INTO cadastro (nome_aluno, matricula, email, data_nascimento) VALUES ('Erica Marques', '75999999999', 'email@email.com', '2000-10-11')");
   });
 
   afterAll(async () => {
